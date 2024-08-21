@@ -1,0 +1,21 @@
+:root {
+  --bg-color: #151515;
+  --secondary-black: #0b0b0b;
+  --accent-yellow: #ffa63d;
+  --accent-blue: #3f7df4;
+  --og-white: #ffffff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-color);
+  color: var(--og-white);
+}
