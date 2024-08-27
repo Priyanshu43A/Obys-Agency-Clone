@@ -10,6 +10,10 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
+  cursor: none;
+
+  /* border: 1px solid white; */
 }
 
 html,
@@ -18,4 +22,195 @@ body {
   height: 100%;
   background-color: var(--bg-color);
   color: var(--og-white);
+  overflow-x: hidden;
+  cursor: none;
+}
+
+.page {
+  min-height: 100vh;
+  height: 100%;
+  width: 100vw;
+  color: white;
+}
+
+.customCursor {
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgb(189, 189, 189);
+  border-radius: 50%;
+  position: fixed;
+  z-index: 9999;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+
+  transition: scale 0.3s ease;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 3vh;
+  position: relative;
+}
+
+.nav-section:nth-child(1) {
+  width: 10%;
+  max-width: 50%;
+}
+
+.nav-section:nth-last-child(1) {
+  width: 50%;
+  display: flex;
+  justify-content: end;
+}
+
+.nav-section {
+  display: inline-grid;
+  grid-template-columns: 1fr 0.8fr 3fr;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.para {
+  position: relative;
+  transform: translateY(25%);
+  justify-self: end;
+  font-family: "inter", sans-serif;
+  line-height: 1vw;
+}
+
+.nav-section ul {
+  display: flex;
+  gap: 0px;
+  list-style: none;
+  list-style: none;
+  position: relative;
+  width: 50%;
+  height: 100%;
+  justify-content: end;
+}
+
+.nav-section ul li {
+  position: relative;
+  width: 25%;
+  height: 100%;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .nav-section ul li a {
+  position: absolute;
+} */
+
+.nav-section ul a {
+  text-decoration: none;
+  color: var(--og-white);
+  position: absolute;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0vw 3vw 0vw 6vw;
+}
+
+.menu {
+  position: fixed;
+}
+
+.logo:hover {
+  opacity: 0.7;
+  transition: opacity 0.5s ease;
+}
+
+#page1 > div {
+  display: grid;
+  margin-top: 20vh;
+  grid-template-columns: 1fr 3.5fr;
+  column-gap: 5vw;
+}
+
+#page1 > div > div:nth-child(1) {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#page1 > div > div:nth-child(1) h1 {
+  font-style: italic;
+  font-size: 3.5vw;
+  padding-top: 2px;
+  font-weight: lighter;
+  font-family: "Playfair Display", serif;
+}
+
+#page1 > div > div:nth-child(2) h1 {
+  font-size: 7.5vw;
+  font-weight: normal;
+  text-transform: uppercase;
+  line-height: 7vw;
+  font-family: "inter", sans-serif;
+}
+
+#home-vdo-cont {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  padding: 3vh 0 3vh 0vw;
+  position: relative;
+}
+
+#vdo-thumbnail {
+  padding: 3vh 0 3vh 0vw;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  object-fit: fill;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+
+#vdo-thumbnail img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.vdo-btn {
+  background-color: var(--accent-yellow);
+  color: var(--og-white);
+  z-index: 9;
+  position: absolute;
+  left: 80%;
+  top: -5%;
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vdo-btn > div {
+  font-size: 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#underline {
+  width: 100%;
+
+  height: 1px;
+
+  background-color: var(--og-white);
 }
